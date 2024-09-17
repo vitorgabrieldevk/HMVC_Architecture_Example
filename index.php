@@ -43,6 +43,7 @@ if (ENVIRONMENT === 'development') {
 // without hardcoding them throughout the system.
 //
 define('BASE_PATH', dirname(__FILE__));
+define('PATH_ICON', '/favicon.ico');
 define('APP_PATH', BASE_PATH . '/app/');
 define('SYSTEM_PATH', BASE_PATH . '/system/');
 define('MODULES_PATH', APP_PATH . 'modules/');
@@ -72,7 +73,7 @@ define('PUBLIC_PATH', BASE_PATH . '/public/');
 require APP_PATH . 'config/config.php';       // Load global configuration (e.g., timezone, locale)
 require APP_PATH . 'routes/routerController.php';       // Load application routes for URL routing
 require APP_PATH . 'config/database.php';     // Load database connection settings
-require APP_PATH . '../system/_helpers.php';     // Load functions helpers
+require APP_PATH . '../helpers/View.php';     // Load functions helpers
 
 // ---------------------------------------------------------
 // Step 5: Initialize the Router and Dispatch Request
