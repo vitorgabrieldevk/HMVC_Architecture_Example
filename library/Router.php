@@ -8,7 +8,7 @@ class Router
     public function __construct()
     {
         // Carregar as rotas do arquivo routes.php
-        $this->routes = require_once 'routes.php';
+        $this->routes = require_once 'app/routes/routes.php';
     }
 
     // Função principal que inicia o roteamento
@@ -38,7 +38,7 @@ class Router
                 echo "Controlador {$controller} não encontrado no módulo {$module}.";
             }
         } else {
-            echo "Rota não encontrada!";
+            Helpers::redirect_route('/NotFound');
         }
     }
 
